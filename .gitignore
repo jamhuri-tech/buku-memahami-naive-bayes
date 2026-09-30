@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 gbr/
 .DS_Store
+# salinan otomatis Finder/iCloud ("nama 2.py")
+* 2.*
