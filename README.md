@@ -76,6 +76,24 @@ NumPy 2.1.3, SciPy 1.15.3, scikit-learn 1.6.1, Matplotlib 3.10.0).
 Versi lain biasanya berjalan, tetapi digit terakhir sebagian angka
 dapat berbeda.
 
+Angka buku dihasilkan di macOS arm64 dengan NumPy/SciPy ber-OpenBLAS,
+dan GitHub Actions menjalankan pemeriksaan di lingkungan yang semirip
+mungkin. Dua blok bergantung pada platform karena regresi logistiknya
+berhenti sebelum benar-benar konvergen (C besar, fitur berdimensi
+tinggi), sehingga jalur solver ikut ditentukan pustaka aljabar
+linear:
+
+- Bab 14, regresi logistik pada 20 Newsgroups: banyaknya lintasan dan
+  digit terakhir akurasi (buku: 332 lintasan, 0,5973).
+- Bab 19, regresi logistik pada SmSA: akurasi, F1, dan log-loss
+  bergeser sekitar setengah poin persen (buku: validasi 0,8960, uji
+  0,7980).
+
+Semua angka naive Bayes dan semua Contoh Soal sama di setiap platform
+yang diuji. Karena itu `periksa.py` di GitHub Actions melaporkan dua
+blok itu sebagai berbeda; perbaikannya (regresi logistik yang
+dikonvergenkan ketat) dijadwalkan untuk edisi berikutnya.
+
 ## Salah ketik, galat, dan saran
 
 Silakan buka [issue](../../issues) di repositori ini: sebutkan bab,
