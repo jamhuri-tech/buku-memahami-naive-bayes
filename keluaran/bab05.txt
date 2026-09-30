@@ -1,0 +1,58 @@
+# Blok keluaran yang tercetak di Bab 5 (bab05-naif.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab05_*.py.
+
+=== blok 1 ===
+demam dan batuk
+  korelasi semua orang     : +0.178
+  korelasi di antara flu   : -0.006
+  korelasi di antara sehat : -0.001
+  P(batuk) = 0.258, P(batuk | demam) = 0.396
+dua koin, kelas = keduanya sama
+  korelasi semua lemparan  : -0.000
+  korelasi di kelas 1      : +1.000
+  korelasi di kelas 0      : -1.000
+
+=== blok 2 ===
+prior (biasa, penipuan): [0.6 0.4]
+P(kata | kelas)        hadiah  transfer    segera     rapat
+  penipuan              0.750     0.750     0.750     0.000
+  biasa                 0.167     0.333     0.167     0.667
+
+=== blok 3 ===
+pola  tabel utuh   naif
+1111      0/0      0.000
+1110    1.000      0.989
+1101      0/0      0.000
+1100    1.000      0.859
+1011      0/0      0.000
+1010    1.000      0.938
+1001      0/0      0.000
+1000    0.000      0.503
+0111      0/0      0.000
+0110    1.000      0.859
+0101    0.000      0.000
+0100    0.000      0.288
+0011    0.000      0.000
+0010      0/0      0.503
+0001    0.000      0.000
+0000      0/0      0.063
+
+=== blok 4 ===
+BernoulliNB: pola 1100 -> 0.859, pola 1010 -> 0.938
+
+=== blok 5 ===
+log-odds prior           -0.4055
+  hadiah    ada           +1.5041
+  transfer  ada           +0.8109
+  segera    tidak         -1.2040
+  rapat     tidak         +1.0986
+log-odds posterior       +1.8042
+posterior = 1/(1 + exp(-1.8042)) = 0.8587
+
+=== blok 6 ===
+                     akurasi  log-loss  ekstrem
+posterior benar       0.9205   0.1971    0.411
+naif, salinan m = 1   0.9204   0.1972    0.402
+naif, salinan m = 2   0.9056   0.2467    0.562
+naif, salinan m = 4   0.8614   0.5094    0.712
+naif, salinan m = 8   0.8367   1.2496    0.843

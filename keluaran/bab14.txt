@@ -1,0 +1,27 @@
+# Blok keluaran yang tercetak di Bab 14 (bab14-bertahap.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab14_*.py.
+
+=== blok 1 ===
+jumlah kuadrat    :     2.000000
+Chan dkk.         :     0.999551
+GaussianNB        :     0.999551
+np.var sekaligus  :     0.999551
+
+=== blok 2 ===
+alpha  2^8     2^12    2^14    2^16    2^20   kosakata
+1      0.9508  0.9792  0.9810  0.9708  0.9526  0.9871
+0.1    0.9492  0.9772  0.9806  0.9860  0.9734  0.9873
+0.01   0.9492  0.9736  0.9790  0.9824  0.9858  0.9844
+
+=== blok 3 ===
+data            model              lintasan  akurasi uji
+SMS spam        naive Bayes               1   0.9860
+                regresi logistik        16   0.9822
+20 Newsgroups   naive Bayes               1   0.6492
+                regresi logistik       332   0.5973
+
+=== blok 4 ===
+potongan: 12, pesan: 5574
+hitungan kelas sama : True
+hitungan fitur sama : True
+maks |selisih log-posterior| = 0.0e+00

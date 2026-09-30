@@ -1,0 +1,7 @@
+# Blok keluaran yang tercetak di Bab 1 (bab01-mengapa.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab01_*.py.
+
+=== blok 1 ===
+akurasi validasi silang: 0.9871
+P(spam) = 0.9999  <- You won a free prize call now
+P(spam) = 0.0000  <- Are we still meeting for lunch tomorrow

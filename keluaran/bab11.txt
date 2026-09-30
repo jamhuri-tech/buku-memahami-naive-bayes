@@ -1,0 +1,28 @@
+# Blok keluaran yang tercetak di Bab 11 (bab11-komplemen.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab11_*.py.
+
+=== blok 1 ===
+data                       multinomial  complement
+pesan utuh                   0.8062      0.8182
+tanpa kepala/tanda/kutipan   0.6492      0.6670
+latih 11314, uji 7532, kosakata 101631
+
+=== blok 2 ===
+dokumen latih: kelas kecil rata-rata 59, kelas besar 569
+model                   recall kecil besar  akurasi  F1 makro
+multinomial                 0.095   0.771   0.4442   0.3568
+multinomial, prior sama     0.118   0.766   0.4527   0.3785
+
+=== blok 3 ===
+model                   recall kecil besar  akurasi  F1 makro
+multinomial                 0.095   0.771   0.4442   0.3568
+multinomial, prior sama     0.118   0.766   0.4527   0.3785
+complement                  0.157   0.780   0.4837   0.4031
+complement, norm=True       0.340   0.738   0.5516   0.5268
+
+=== blok 4 ===
+fitur       multinomial       complement
+            akurasi  F1 makro  akurasi  F1 makro
+hitungan    0.6492   0.6227    0.6670   0.6386
+log-tf      0.6601   0.6328    0.6799   0.6555
+tf-idf      0.6851   0.6572    0.7111   0.6927

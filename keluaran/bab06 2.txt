@@ -1,0 +1,33 @@
+# Blok keluaran yang tercetak di Bab 6 (bab06-kemungkinan.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab06_*.py.
+
+=== blok 1 ===
+Bernoulli : numerik 0.750000, rumus N1/N = 0.750000
+kategorik : numerik 0.250000 0.333333 0.416667
+            rumus   0.250000 0.333333 0.416667
+
+=== blok 2 ===
+Gaussian  : numerik mu = 8.000000, sigma^2 = 5.000000
+            rumus  mu = 8.000000, sigma^2 = 5.000000 (bagi N)
+            np.var(ddof=1) = 6.666667 (bagi N - 1)
+
+=== blok 3 ===
+N_k            : [33543 33193 33264]
+sama dengan class_count_  : True
+sama dengan feature_count_: True
+maks |theta - theta_benar| = 0.0073
+
+=== blok 4 ===
+gabungan dua bagian = data utuh: True
+maks |rata-rata dua taksiran - theta| = 0.00143
+
+=== blok 5 ===
+ theta    N  gb-sim  gb-rumus  nol-sim  nol-rumus
+  0.75    4  0.2169  0.2165    0.0038   0.0039
+  0.75   20  0.0969  0.0968    0.0000   0.0000
+  0.75  100  0.0433  0.0433    0.0000   0.0000
+  0.75  500  0.0193  0.0194    0.0000   0.0000
+  0.05    4  0.1085  0.1090    0.8157   0.8145
+  0.05   20  0.0487  0.0487    0.3577   0.3585
+  0.05  100  0.0217  0.0218    0.0056   0.0059
+  0.05  500  0.0097  0.0097    0.0000   0.0000

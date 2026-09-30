@@ -1,0 +1,16 @@
+# Blok keluaran yang tercetak di Bab 13 (bab13-darinol.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab13_*.py.
+
+=== blok 1 ===
+keluarga           maks |selisih log-posterior|  tebakan sama
+Bernoulli, pesan           8.88e-16             True
+kategorik, jamur           4.26e-14             True
+multinomial, SMS           2.27e-13             True
+Gaussian, kanker           9.09e-13             True
+
+=== blok 2 ===
+rata-rata angka per pesan: ham 0.31, spam 15.81
+model                    akurasi  log-loss
+kata saja                 0.9871   0.0957
+kata + angka Gaussian     0.9898   0.0951
+kata + angka kategorik    0.9905   0.0831
