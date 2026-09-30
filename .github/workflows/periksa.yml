@@ -9,11 +9,24 @@ on:
 
 jobs:
   periksa:
-    runs-on: ubuntu-latest
+    # Angka buku dihasilkan di macOS arm64 dengan NumPy ber-OpenBLAS 0.3.29.
+    # Lingkungan yang sama dipasang di sini supaya digit terakhir hasil
+    # aljabar linear ikut sama; di mesin lain digit terakhir dapat berbeda.
+    runs-on: macos-latest
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: conda-incubator/setup-miniconda@v3
         with:
-          python-version: "3.13"
-      - run: pip install -r requirements.txt
+          miniforge-version: latest
+          channels: conda-forge
+          python-version: "3.13.5"
+          activate-environment: buku
+      - run: >
+          conda install -y python=3.13.5 numpy=2.1.3 scipy=1.15.3
+          scikit-learn=1.6.1 matplotlib=3.10.0 libopenblas=0.3.29
+          "libblas=*=*openblas"
+      - run: python -c "import numpy; numpy.show_config()"
       - run: python periksa.py
